@@ -4,16 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "mocha test"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "body-parser": "^1.15.2",
-    "cors": "^2.8.1",
-    "express": "^4.14.0",
-    "method-override": "^2.3.7",
-    "mongoose": "^4.7.6",
-    "morgan": "^1.7.0"
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
   }
 }
