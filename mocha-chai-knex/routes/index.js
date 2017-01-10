@@ -1,10 +1,19 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
+var queries = require('../db/queries');
+
+
+// *** GET all shows *** //
 router.get('/shows', function(req, res, next) {
-  // res.render('index', { title: 'Express' });
-  res.send('send shows back');
+  queries.getAll()
+  .then(function(shows) {
+    res.status(200).json(shows);
+  })
+  .catch(function(error) {
+    next(error);
+  });
 });
+
 
 module.exports = router;
